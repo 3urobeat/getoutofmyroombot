@@ -1,0 +1,15 @@
+{
+  "name": "getoutofmyroombot",
+  "version": "1.0.0",
+  "description": "Play 'Get out of my room i'm playing minecraft' when someone joins the channel.",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "ffmpeg-binaries": "^4.0.0",
+    "opusscript": "^0.0.4"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "3urobeat"
+}
