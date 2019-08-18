@@ -19,6 +19,8 @@ Extract the zip.
 
 ## Setting the bot up
 
+Open a command prompt or power shell in the folder and type `npm install`. Let it install the dependencies.  
+
 Rename the `token.json.example` to `token.json`.  
 Open the file with a text editor and insert the token of your bot account.  
 Read here how to get a token: [Link](https://muskaning.com/how-to-make-a-discord-bot/)  
