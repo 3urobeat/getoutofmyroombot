@@ -3,6 +3,8 @@
 	<strong>A user joins the voice channel? Tell him to get out!</strong><br />See how to set up this useless bot below.<br /><br />
 </div>
 
+**If you want, you can donate a few bucks on my [Patreon](https://www.patreon.com/3urobeat)! I would really appreciate it!**
+
 Join a channel and type getout_join to summon the bot. The bot wil now play 'Get out of my room i'm playing minecraft' everytime a user joins the voice Channel.  
 
 ## Requirements
