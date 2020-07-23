@@ -4,7 +4,7 @@
   "description": "Play 'Get out of my room i'm playing minecraft' when someone joins the channel.",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^11.4.2",
+    "discord.js": "^12.2.0",
     "ffmpeg-binaries": "^4.0.0",
     "opusscript": "^0.0.4"
   },
