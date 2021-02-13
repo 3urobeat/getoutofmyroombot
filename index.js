@@ -77,20 +77,23 @@ bot.on("message", async function(message) {
 bot.on('voiceStateUpdate', (oldState, newState) => { //Listen for people joining the bot's channel and play file
     if(bot.guilds.cache.get(newState.member.guild.id).voice == null) return;
 
-    let newUserChannel = newState.member.voice.channel;
-    let oldUserChannel = oldState.member.voice.channel;
+    let newUserChannel = newState.channel;
+    let oldUserChannel = oldState.channel;
 
     if(newState.member.user.bot) return;
-    if(newUserChannel == undefined) return console.log("User left.")
+    if(!newUserChannel) return console.log("User left.")
+    if(oldUserChannel && newUserChannel && newUserChannel.id == oldUserChannel.id) return;
 
-    if(newUserChannel.id == bot.guilds.cache.get(newState.member.guild.id).voice.connection.channel.id) {
-        // User Joins a voice channel
-        console.log("User joined. Playing audio...")
-        newUserChannel.guild.voice.connection.play('./sound.mp3')
-  
-    } else if (newUserChannel.id != oldUserChannel.id) {
-        // User leaves a voice channel
-        console.log("User left.") }
+    if(bot.guilds.cache.get(newState.member.guild.id).voice.connection) {
+        if(newUserChannel.id == bot.guilds.cache.get(newState.member.guild.id).voice.connection.channel.id) {
+            // User Joins a voice channel
+            console.log("User joined. Playing audio...")
+            newUserChannel.guild.voice.connection.play('./sound.mp3')
+    
+        } else if (newUserChannel.id != oldUserChannel.id) {
+            // User leaves a voice channel
+            console.log("User left.") } 
+    }
 })
 
 bot.login(token.token)
